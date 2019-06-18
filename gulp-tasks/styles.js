@@ -6,7 +6,7 @@ const plumber = require('gulp-plumber');
 const autoprefixer = require('autoprefixer');
 
 module.exports = function styles(gulp, config, bs) {
-  const processors = [autoprefixer(config.autoprefixer)];
+  const processors = [autoprefixer()];
 
   gulp.task('styles', () =>
     gulp

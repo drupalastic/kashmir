@@ -21,9 +21,9 @@ module.exports = function lint(gulp, config) {
     gulp
       .src(config.scripts.source)
       .pipe(utils.onDev(plumber()))
-      .pipe(eslint(config.eslint.options))
-      .pipe(eslint.format())
-      .pipe(eslint.failAfterError())
+      .pipe(eslint())
+      // .pipe(eslint.format())
+      // .pipe(eslint.failAfterError())
       .pipe(utils.onDev(plumber.stop()))
   );
 

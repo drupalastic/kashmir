@@ -1,20 +1,21 @@
 module.exports = {
-  rtl: true,
   styles: {
-    source: ['sass/**/*.scss'],
-    destination: 'dist/css/',
+    watch: ['sass/**/*.scss'],
+    source: ['sass/*.scss'],
+    destination: 'css/',
     options: {
       outputStyle: 'expanded',
       includePaths: ['./node_modules']
     }
   },
   scripts: {
-    source: ['js/**/*.ts'],
-    destination: 'dist/js/'
+    watch: ['ts/*.ts'],
+    source: ['ts/*.ts'],
+    destination: 'js/'
   },
   svg: {
     source: 'images/svg/**/*.svg',
-    destination: 'dist/images/svg/'
+    destination: 'images/svg/'
   },
   stylelint: {
     options: {
@@ -37,11 +38,12 @@ module.exports = {
   },
   eslint: {
     options: {
-      fix: false
+      fix: false,
+      configFilePath:'./.eslintrc'
     }
   },
   browserSync: {
-    proxy: null,
+    proxy: 'http://local.lofi.com/',
     open: true,
     xip: false,
     logConnections: false

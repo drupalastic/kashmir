@@ -12,6 +12,7 @@ regions:
 
 libraries:
   - kashmir/reset
+  - kashmir/global
 # component-libraries:
 #   atoms:
 #     paths:
